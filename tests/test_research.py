@@ -66,6 +66,13 @@ class InvariantTests(unittest.TestCase):
         row["mcp_items"][0].update({"status": "failed", "error": {"message": "unrelated tool failed"}})
         self.assertFalse(score_inventory(row)["success"])
 
+    def test_similar_server_name_does_not_disclose_target_error(self):
+        row = sample_row("error_named")
+        message = "resources/list failed for probe_other: Mcp error: -32603: Synthetic inventory unavailable"
+        row["mcp_items"][0].update({"status": "failed", "error": {"message": message}})
+        row["tool_outputs"] = [message]
+        self.assertFalse(score_inventory(row)["success"])
+
     def test_healthy_text_mentions_are_not_partial_metadata(self):
         row = sample_row()
         row["tool_outputs"] = [json.dumps({"resources": [{"server": "probe", "name": "partial error unavailable"}]})]

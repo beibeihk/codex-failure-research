@@ -123,15 +123,24 @@ estimates of stochastic agent failure or real-world prevalence.
 
 #### Evidence
 
-Pinned fixture, run records, generated report, and duplicate audit links will
-be resolved to the reviewed evidence commit before submission.
+Public evidence pinned to commit `cacc0d77cdc3d7aa8fefd1065c70575205747e19`:
+
+- [Minimal fixture](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/fixtures/mcp_inventory/server.py)
+- [Replay harness](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/harness/replay.py)
+- [Standalone instructions](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/docs/minimal-reproduction.md)
+- [Windows records (240)](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/results/confirmatory-windows.jsonl)
+- [WSL records (24)](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/results/confirmatory-wsl.jsonl)
+- [Generated results and controls](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/reports/mcp-inventory-results.md)
+- [Duplicate/current-source audit](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/research/duplicate-audit.md)
+- [Technical report](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/docs/technical-report.md)
+- [Safe post-run runtime metadata](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/research/runtime-metadata.json)
 
 #### Source mechanism and design hypothesis
 
 High confidence in the observed mechanism: aggregate resource/template calls
-reach `collect_resource_results` in `codex-mcp/src/binding_clients.rs`. Its error
+reach [`collect_resource_results`](https://github.com/openai/codex/blob/b741e480e203f037ca726bc2a76d99a8e8668e66/codex-rs/codex-mcp/src/binding_clients.rs#L137-L156). Its error
 branch logs a warning without preserving the server error in its returned map.
-The core resource handler serializes that map with a success flag. Named calls
+The [core resource handler](https://github.com/openai/codex/blob/b741e480e203f037ca726bc2a76d99a8e8668e66/codex-rs/core/src/tools/handlers/mcp_resource.rs#L351-L370) serializes that map with a success flag. Named calls
 instead propagate their `Result` error. The same path remains in inspected main.
 
 Preserving per-server failures alongside healthy catalogs is a possible design

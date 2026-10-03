@@ -107,4 +107,19 @@ Scenario SHA256：`9b2aa3d823c45dfac8f9689ae05e56f4349c63cf26bb5f77ce8e12d8fe96c
 
 ## 修订后复核
 
-待作者完成 verifier 与 Issue 表述修订后，单独检查其 diff、重算原记录并复核反例。初审原始反例结果和上述意见保留，不修改历史记录。
+2026-10-03，作者修订后再次检查 `analyzers/invariants.py`、`tests/test_research.py`、Issue draft、methodology、technical report、duplicate audit、runtime metadata，以及 replay 的失败诊断分支。初审意见和原始反例结果保留；四个初始反例的原结果另保存于 `.cache/blind-review-record-audit-initial.json`，新 scorer 重放结果在 `.cache/blind-review-record-audit.json`。
+
+| 初审反例 | 修订后结果 |
+|---|---|
+| 无关 UI failure，model-facing 仍为空 | `success:false` |
+| 文本包含 probe 和 incidental partial | `success:false` |
+| 健康资源被静默改为空 | `success:false` |
+| initialize 证据删除 | `execution_valid:false, success:null` |
+
+独立重算 264 条原记录，评分无变化；两份原结果文件、fixture、scenario 和独立运行的 Windows binary 的 SHA256 均与初审一致。独立运行 22 个测试全部通过，`python -m analyzers.report --check` 确认报告与记录一致。再次严格内容审计的结论不变。
+
+草稿和正文已明确 proposed invariant 是 error-provenance 请求，允许 best-effort 保留健康结果，没有主张官方契约要求原子失败。#6217 的共享症状和可能共享 collector 机制已承认。Windows stderr warning 与 WSL flag=false/未检查其他 log channel 的差异已澄清。`research/runtime-metadata.json` 使用安全字段，并明确同一主机在 confirmatory 执行之后采集，不是逐次运行断言。本轮独立调用 Windows Python 和 `wsl.exe --exec python3` 的 `platform` 信息，核对了这两个主机的全部所列字段：Windows Python 3.11.5、WSL Python 3.12.3 和 kernel release `6.18.40.1-microsoft-standard-WSL2` 均一致；这仍然是事后主机确认而不是历史 per-run 证明。失败初始化的诊断不再打印任意 stderr。
+
+额外反例发现一处剩余、非当前数据的限制：把 named 错误的 UI/model-facing 两处文字同时改为 `resources/list failed for probe_other: Mcp error: -32603: ...`，修订 scorer 仍通过，因为 server 绑定使用 `probe` 子串匹配。反例在 `.cache/blind-review-revision-extra-check.json`。现有记录均准确写出 `probe`，独立严格审计也核对了实际文字；因此这个边界不推翻本案事实，也不阻止窄范围 Issue。若将 scorer 当作未来通用 verifier，应进一步改为明确服务器引用或 token 边界并加入测试。
+
+**修订复核意见：技术 reporting threshold 已满足，可以提交一个以已声明资源服务器的有效内部错误为条件、仅请求保留错误来源的 evidence-backed Issue。** 这是审查结论，不是对维护者是否按 bug 接受、新颖性、修复优先级或最终 API 设计的保证。没有新增模型任务损害证据。**目前仅剩公开发布检查：真实 evidence commit SHA 和各 permalink 必须可读取；在具体 SHA 到达之前，本审查不把外部证据就绪状态标为通过。**

@@ -1,5 +1,6 @@
 """Score explicit inventory outcomes only after verifying the exercised path."""
 import json
+import re
 
 
 MODES = {
@@ -32,6 +33,10 @@ def _explicit_server_errors(catalog, unavailable):
         else:
             return False
     return True
+
+
+def _names_server(text, name):
+    return re.search(r"(?<![\w.-])" + re.escape(name) + r"(?![\w.-])", text) is not None
 
 
 def score_inventory(row):
@@ -73,7 +78,7 @@ def score_inventory(row):
     message = (item.get("error") or {}).get("message", "")
     # A failed item must identify this server and error in model-facing text too.
     failed = item.get("status") == "failed" and all(
-        name in message and name in outputs[0]
+        _names_server(message, name) and _names_server(outputs[0], name)
         and (("-32603" in message and "-32603" in outputs[0]) if modes[name] == "error"
              else any(word in message.lower() and word in outputs[0].lower()
                       for word in ("invalid", "malformed", "deserializ")))
