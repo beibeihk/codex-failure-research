@@ -123,3 +123,22 @@ Scenario SHA256：`9b2aa3d823c45dfac8f9689ae05e56f4349c63cf26bb5f77ce8e12d8fe96c
 额外反例发现一处剩余、非当前数据的限制：把 named 错误的 UI/model-facing 两处文字同时改为 `resources/list failed for probe_other: Mcp error: -32603: ...`，修订 scorer 仍通过，因为 server 绑定使用 `probe` 子串匹配。反例在 `.cache/blind-review-revision-extra-check.json`。现有记录均准确写出 `probe`，独立严格审计也核对了实际文字；因此这个边界不推翻本案事实，也不阻止窄范围 Issue。若将 scorer 当作未来通用 verifier，应进一步改为明确服务器引用或 token 边界并加入测试。
 
 **修订复核意见：技术 reporting threshold 已满足，可以提交一个以已声明资源服务器的有效内部错误为条件、仅请求保留错误来源的 evidence-backed Issue。** 这是审查结论，不是对维护者是否按 bug 接受、新颖性、修复优先级或最终 API 设计的保证。没有新增模型任务损害证据。**目前仅剩公开发布检查：真实 evidence commit SHA 和各 permalink 必须可读取；在具体 SHA 到达之前，本审查不把外部证据就绪状态标为通过。**
+
+## 最终修订与公开证据验收
+
+2026-10-03，再次独立复核 `_names_server` 的精确服务器 token 边界与新增 `probe_other` 测试。此前剩余反例现在得到 `execution_valid:true, success:false`；`probe_other`、`probe-other`、`probe.other`、`xprobe`、`probe2` 均不再被当作 `probe`，准确的 `probe` 与 `` `probe` `` 仍被识别。此前非阻碍的子串边界问题已关闭，其原反例结果另存 `.cache/blind-review-revision-extra-check-before.json`，最终结果在 `.cache/blind-review-revision-extra-check.json`。这项检查验证已发现的具体边界，不宣称 scorer 对任意未来 schema 已完备。
+
+独立运行 23 项测试全部通过；264 条原记录再次重算，评分零变化，`report --check` 再次通过。fixture、scenario、Windows binary 和两份结果文件的初审 SHA256 均未变化，没有重写原实验。
+
+我匿名读取两个公开 commit 的 raw 文件，不使用 GitHub token，并与本地对应 commit 的 `git show SHA:path` 字节逐一比较：
+
+| Public commit | 可读取文件 | 与对应 Git 对象完全一致 | 与验收时本地工作文件一致 |
+|---|---:|---:|---:|
+| `cacc0d77cdc3d7aa8fefd1065c70575205747e19` | 13/13，HTTP 200 | 13/13 | 10/13；scorer、tests、review 为预期历史版本 |
+| `3ba3412fab85d5e44afee0d3af24615020646586` | 13/13，HTTP 200 | 13/13 | 13/13，比较发生在本轮附录写入之前 |
+
+每个 commit 检查了：minimal fixture、replay harness、standalone reproduction instructions、Windows/WSL 原记录、生成结果表、duplicate audit、technical report、safe runtime metadata、scenario、scorer、independent review 和测试文件。当前 draft 的九条证据链接全部包含实际初始 SHA，对应文件都可读取。fixture、scenario 与两份 hash-bound JSONL 在这两个公开提交中也与本地原字节相同；不存在仅由换行转换造成的证据哈希漂移。验收元数据保存在 `.cache/blind-review-public-evidence.json`，其中逐项记录匿名 raw URL、HTTP 状态、SHA256、工作文件和 Git 对象比较结果。
+
+**最终审查意见：已发现的修正项和当前公开证据可读性检查通过；可以提交这一个窄范围 evidence-backed error-provenance Issue。** 本案仍不证明 task harm、模型失败频率、官方契约违背或完全新的 collector 机制；维护者选择相邻 canonical Issue 属于合理处理。本轮只读取公开证据并更新本地报告，未创建 Issue、评论或 PR。
+
+本轮附录产生于上述公开提交之后。最终 Issue 若升级到包含本附录的新 commit，应统一使用其真实 SHA，并机械检查这些链接仍可读取、fixture/scenario/results 的原哈希不变；不应把尚不存在的未来 SHA 写成已经验收。此次验收结论覆盖上述两个具体 commit 和当前已审查内容。

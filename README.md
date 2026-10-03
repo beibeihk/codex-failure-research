@@ -8,6 +8,9 @@ is not affiliated with or endorsed by OpenAI. It does not rank model providers.
 
 [中文说明](README.zh-CN.md)
 
+[CI](https://github.com/beibeihk/codex-failure-research/actions/workflows/ci.yml) ·
+[Independent review](reports/independent-review.md) · [Publication checks](reports/quality-gate.md)
+
 ## Motivation
 
 The valuable contribution is a problem another engineer can reproduce and
@@ -55,6 +58,8 @@ python -m analyzers.report --input .cache/new-matrix.jsonl --output-dir .cache/r
 The server is standard line-delimited JSON-RPC MCP; the Responses replay asks
 the actual Codex binary to invoke an advertised tool. Full request bodies and
 headers are never recorded. [Minimal fixture](fixtures/mcp_inventory).
+An [eight-file standalone replay](docs/minimal-reproduction.md) is included in
+the release ZIP; it does not include the separately downloaded Codex binary.
 
 ## Results
 
