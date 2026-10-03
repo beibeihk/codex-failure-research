@@ -123,17 +123,20 @@ estimates of stochastic agent failure or real-world prevalence.
 
 #### Evidence
 
-Public evidence pinned to commit `cacc0d77cdc3d7aa8fefd1065c70575205747e19`:
+Public evidence pinned to commit `2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8`:
 
-- [Minimal fixture](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/fixtures/mcp_inventory/server.py)
-- [Replay harness](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/harness/replay.py)
-- [Standalone instructions](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/docs/minimal-reproduction.md)
-- [Windows records (240)](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/results/confirmatory-windows.jsonl)
-- [WSL records (24)](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/results/confirmatory-wsl.jsonl)
-- [Generated results and controls](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/reports/mcp-inventory-results.md)
-- [Duplicate/current-source audit](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/research/duplicate-audit.md)
-- [Technical report](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/docs/technical-report.md)
-- [Safe post-run runtime metadata](https://github.com/beibeihk/codex-failure-research/blob/cacc0d77cdc3d7aa8fefd1065c70575205747e19/research/runtime-metadata.json)
+- [Minimal fixture](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/fixtures/mcp_inventory/server.py)
+- [Replay harness](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/harness/replay.py)
+- [Standalone instructions](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/docs/minimal-reproduction.md)
+- [Windows records (240)](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/results/confirmatory-windows.jsonl)
+- [WSL records (24)](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/results/confirmatory-wsl.jsonl)
+- [Generated results and controls](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/reports/mcp-inventory-results.md)
+- [Duplicate/current-source audit](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/research/duplicate-audit.md)
+- [Technical report](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/docs/technical-report.md)
+- [Safe post-run runtime metadata](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/research/runtime-metadata.json)
+- [Independent adversarial review and final acceptance](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/reports/independent-review.md)
+- [Verifier](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/analyzers/invariants.py)
+- [Predeclared scenario](https://github.com/beibeihk/codex-failure-research/blob/2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8/scenarios/mcp_inventory.json)
 
 #### Source mechanism and design hypothesis
 
