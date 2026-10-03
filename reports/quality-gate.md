@@ -21,7 +21,7 @@ acceptance, novelty, model-task impact, or a production fix.
 | Fixed evidence | Real full-SHA permalinks in final Issue draft; independent readability check |
 | Independent review | Adversarial reruns, strict 264-record audit, verifier counterexamples and revision checks |
 | Code checks | 23 unit tests, schemas, score/hash recomputation and deterministic report consistency |
-| Public CI | Windows/Ubuntu × Python 3.10/3.12 passed on 3ba3412; final release commit checked separately |
+| Public CI | Windows/Ubuntu × Python 3.10/3.12 passed; [release commit CI, four jobs](https://github.com/beibeihk/codex-failure-research/actions/runs/37127208089) succeeded on ccf3b2f |
 | External-host replay | [Ubuntu public-binary workflow](https://github.com/beibeihk/codex-failure-research/actions/runs/37126639229): 24/24 valid checks; outside confirmatory denominators |
 | Upstream contribution | At most one Issue; no upstream PR; no employee mentions or job-seeking content |
 

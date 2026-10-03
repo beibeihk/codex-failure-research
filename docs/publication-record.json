@@ -1,0 +1,27 @@
+{
+  "checked_at": "2026-10-03T13:47:47.115077+00:00",
+  "evidence_commit": "2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8",
+  "upstream_issue_url": "https://github.com/openai/codex/issues/50636",
+  "upstream_issue_count": 1,
+  "upstream_pr_count": 0,
+  "issue_state": "open",
+  "issue_comment_count": 0,
+  "release_url": "https://github.com/beibeihk/codex-failure-research/releases/tag/v0.1.0",
+  "release_tag": "v0.1.0",
+  "release_commit": "ccf3b2fccd2c97c513594b2cc48908e781a5c067",
+  "release_published_at": "2026-10-03T13:45:58Z",
+  "minimal_zip": {
+    "name": "codex-mcp-inventory-minimal-v0.1.0.zip",
+    "size": 7899,
+    "digest": "sha256:c622ef3321a977d01f728a23349cfc25cd9c87bb74317146504d0bb30e868776",
+    "url": "https://github.com/beibeihk/codex-failure-research/releases/download/v0.1.0/codex-mcp-inventory-minimal-v0.1.0.zip"
+  },
+  "release_ci_url": "https://github.com/beibeihk/codex-failure-research/actions/runs/37127208089",
+  "release_ci_conclusion": "success",
+  "release_ci_jobs": 4,
+  "public_binary_replay_ci_url": "https://github.com/beibeihk/codex-failure-research/actions/runs/37126639229",
+  "confirmatory_executions": 264,
+  "confirmatory_exclusions": 0,
+  "unit_tests": 23,
+  "limits": "No real model inference, task-harm evidence, main build, production fix, or confirmed novel collector mechanism."
+}
