@@ -2,6 +2,10 @@
 
 面向自主编程 Agent 的可复现可靠性研究。社区项目，非 OpenAI 官方项目。
 
+已提交唯一上游 Issue [#50636](https://github.com/openai/codex/issues/50636)，
+独立审查与 CI 已通过；尚未获得维护者实质回复，也未验证上游修复。
+[v0.1.0 Release](https://github.com/beibeihk/codex-failure-research/releases/tag/v0.1.0)。
+
 项目重视问题定义：先确定被破坏的不变量，再做复现、对照、消融、查重与
 根因分析。不会把一次模型失败包装成稳定缺陷，也不会向 Codex 提交代码 PR。
 

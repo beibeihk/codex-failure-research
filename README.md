@@ -6,7 +6,10 @@ This **community research project** studies failure diagnosis and interventions
 in coding-agent workflows, using public Codex source and synthetic fixtures. It
 is not affiliated with or endorsed by OpenAI. It does not rank model providers.
 
-[中文说明](README.zh-CN.md)
+[中文说明](README.zh-CN.md) · [Release v0.1.0](https://github.com/beibeihk/codex-failure-research/releases/tag/v0.1.0)
+
+Reported as [openai/codex#50636](https://github.com/openai/codex/issues/50636).
+Independent review passed; upstream resolution remains unverified.
 
 [CI](https://github.com/beibeihk/codex-failure-research/actions/workflows/ci.yml) ·
 [Independent review](reports/independent-review.md) · [Publication checks](reports/quality-gate.md)

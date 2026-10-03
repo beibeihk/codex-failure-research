@@ -23,3 +23,12 @@ share the mechanism. See the failure card for upstream reporting status.
 The small reproduction ZIP contains only the fixture and replay entry point,
 documentation, scenario and license. Download Codex separately from its official
 release; the ZIP does not include binaries, credentials or personal sessions.
+
+Upstream report: [openai/codex#50636](https://github.com/openai/codex/issues/50636).
+Evidence is pinned to the independently reviewed commit
+`2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8`.
+No substantive maintainer response or upstream fix has been observed at release.
+
+Validation: 23 unit tests; 264-record schema/hash/score/report checks; four
+Windows/Ubuntu Python CI jobs; standalone ZIP aggregate/named replay; an
+additional 24-run public-binary GitHub Ubuntu check, excluded from confirmatory counts.

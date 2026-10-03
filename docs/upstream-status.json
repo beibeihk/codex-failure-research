@@ -1,0 +1,21 @@
+{
+  "number": 50636,
+  "title": "MCP aggregate resource inventory drops internal errors from resource-supporting servers",
+  "html_url": "https://github.com/openai/codex/issues/50636",
+  "state": "open",
+  "created_at": "2026-10-03T13:40:24Z",
+  "updated_at": "2026-10-03T13:41:10Z",
+  "checked_at": "2026-10-03T13:43:30.402812+00:00",
+  "comment_count": 0,
+  "labels": [
+    "bug",
+    "mcp",
+    "CLI",
+    "tool-calls"
+  ],
+  "maintainer_response": "No substantive maintainer comment observed.",
+  "resolution": "not fixed or independently verified upstream",
+  "upstream_pr_created": false,
+  "evidence_commit": "2b99ab0ac6662b5b294dc50d68ec643d21bd3cc8",
+  "processed_comment_ids": []
+}
