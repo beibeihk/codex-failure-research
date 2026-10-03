@@ -1,0 +1,39 @@
+name: Manual public-binary protocol replay
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Public stable version (no alpha or model account)
+        required: true
+        default: '0.160.0'
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch requested public binary
+        env:
+          REPLAY_VERSION: ${{ inputs.version }}
+        run: |
+          python - <<'PY'
+          import os,re,tarfile,urllib.request,pathlib
+          v=os.environ['REPLAY_VERSION']
+          assert re.fullmatch(r'\d+\.\d+\.\d+',v), 'Stable version required'
+          d=pathlib.Path('.cache/tools'); d.mkdir(parents=True,exist_ok=True)
+          archive=d/'codex.tar.gz'
+          urllib.request.urlretrieve(f'https://github.com/openai/codex/releases/download/rust-v{v}/codex-x86_64-unknown-linux-musl.tar.gz',archive)
+          with tarfile.open(archive) as t: t.extractall(d,filter='data')
+          PY
+      - run: python -m harness.matrix --codex .cache/tools/codex-x86_64-unknown-linux-musl --repetitions 3 --output .cache/manual.jsonl
+      - run: python -m analyzers.report --input .cache/manual.jsonl --output-dir .cache/report
+      - uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-replay-results
+          path: |
+            .cache/manual.jsonl
+            .cache/report/

@@ -1,0 +1,17 @@
+{
+  "captured_date": "2026-10-03",
+  "timing": "Same hosts, captured after confirmatory executions; not a per-run assertion.",
+  "windows": {
+    "system": "Windows",
+    "release": "10",
+    "version": "10.0.26200",
+    "machine": "AMD64",
+    "python": "3.11.5"
+  },
+  "wsl": {
+    "system": "Linux",
+    "release": "6.18.40.1-microsoft-standard-WSL2",
+    "machine": "x86_64",
+    "python": "3.12.3"
+  }
+}

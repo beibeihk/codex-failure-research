@@ -1,0 +1,4 @@
+# Hash-bound experiment artifacts retain their exact committed bytes on all OSes.
+fixtures/mcp_inventory/server.py -text
+scenarios/mcp_inventory.json -text
+results/*.jsonl -text

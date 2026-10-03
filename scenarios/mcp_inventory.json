@@ -1,0 +1,18 @@
+{
+  "id": "mcp-inventory-error-visibility",
+  "title": "Aggregate resource discovery must disclose server failures",
+  "scenario_version": "1.0.0",
+  "codex_version": "recorded per run",
+  "platform": "recorded per run",
+  "repository_fixture": "fixtures/mcp_inventory",
+  "initial_state": "fresh ephemeral exec; synthetic MCP server initializes successfully",
+  "task": "Discover available schema/document resources before a coding task.",
+  "constraints": ["No real model calls", "No private files, sessions, or credentials in results", "Only resource discovery calls are replayed"],
+  "expected_invariants": ["A resource-supporting server's inventory failure must remain visible in the model-facing tool output, rather than becoming an unqualified successful empty/partial inventory."],
+  "success_criteria": "Error or partial-inventory metadata names the unavailable server and communicates the inventory failure.",
+  "repetitions": 10,
+  "type": "A",
+  "preregistration": "Invariant written before first fixture execution. Exploratory pilots excluded. Matrix repetitions raised from 3 to 10 before confirmatory matrix. Do not infer model behavior from protocol replay.",
+  "conditions": ["healthy aggregate", "empty aggregate", "error aggregate", "error named", "mixed aggregate", "template error aggregate", "template error named", "invalid aggregate"]
+}
+

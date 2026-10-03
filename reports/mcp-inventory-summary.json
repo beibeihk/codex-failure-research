@@ -1,0 +1,514 @@
+[
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "empty_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.8045,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "error_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.9849999999999999,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "error_named",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.797,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "healthy_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.688,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "invalid_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.6720000000000002,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "mixed_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.8045,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "template_error_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 2.1174999999999997,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.159.3",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "template_error_named",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.7265000000000001,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "empty_aggregate",
+    "n": 3,
+    "excluded": 0,
+    "successes": 3,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      5.551115123125783e-17,
+      0.5614970317550454
+    ],
+    "median_duration_seconds": 2.228,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "error_aggregate",
+    "n": 3,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 3,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.4385029682449546,
+      1
+    ],
+    "median_duration_seconds": 2.053,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "error_named",
+    "n": 3,
+    "excluded": 0,
+    "successes": 3,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      5.551115123125783e-17,
+      0.5614970317550454
+    ],
+    "median_duration_seconds": 2.098,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "healthy_aggregate",
+    "n": 3,
+    "excluded": 0,
+    "successes": 3,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      5.551115123125783e-17,
+      0.5614970317550454
+    ],
+    "median_duration_seconds": 1.981,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "invalid_aggregate",
+    "n": 3,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 3,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.4385029682449546,
+      1
+    ],
+    "median_duration_seconds": 2.229,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "mixed_aggregate",
+    "n": 3,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 3,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.4385029682449546,
+      1
+    ],
+    "median_duration_seconds": 2.078,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "template_error_aggregate",
+    "n": 3,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 3,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.4385029682449546,
+      1
+    ],
+    "median_duration_seconds": 2.145,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Linux #1 SMP PREEMPT_DYNAMIC Fri Jul 31 22:12:15 UTC 2026 x86_64",
+    "condition": "template_error_named",
+    "n": 3,
+    "excluded": 0,
+    "successes": 3,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      5.551115123125783e-17,
+      0.5614970317550454
+    ],
+    "median_duration_seconds": 2.033,
+    "median_tool_calls": 1
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "empty_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.476,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "error_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.6325,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "error_named",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.789,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "healthy_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.922,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "invalid_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.742,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "mixed_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.93,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "template_error_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.6175000000000002,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.160.0",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "template_error_named",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.7189999999999999,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "empty_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.7890000000000001,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "error_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.7810000000000001,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "error_named",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.8045,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "healthy_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.8904999999999998,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "invalid_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.8904999999999998,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "mixed_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.7574999999999998,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "template_error_aggregate",
+    "n": 10,
+    "excluded": 0,
+    "successes": 0,
+    "failures": 10,
+    "failure_rate": 1.0,
+    "wilson_95": [
+      0.7224672001371107,
+      0.9999999999999999
+    ],
+    "median_duration_seconds": 1.766,
+    "median_tool_calls": 1.0
+  },
+  {
+    "codex_version": "codex-cli 0.162.0-alpha.10",
+    "platform": "Windows 10.0.26200 AMD64",
+    "condition": "template_error_named",
+    "n": 10,
+    "excluded": 0,
+    "successes": 10,
+    "failures": 0,
+    "failure_rate": 0.0,
+    "wilson_95": [
+      0,
+      0.2775327998628892
+    ],
+    "median_duration_seconds": 1.9689999999999999,
+    "median_tool_calls": 1.0
+  }
+]

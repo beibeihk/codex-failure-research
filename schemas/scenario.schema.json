@@ -1,0 +1,11 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "type":"object",
+  "required":["id","title","codex_version","platform","repository_fixture","initial_state","task","constraints","expected_invariants","success_criteria","repetitions","scenario_version","type"],
+  "properties":{
+    "id":{"type":"string"},"title":{"type":"string"},"codex_version":{"type":"string"},"platform":{"type":"string"},
+    "repository_fixture":{"type":"string"},"initial_state":{"type":"string"},"task":{"type":"string"},
+    "constraints":{"type":"array","items":{"type":"string"}},"expected_invariants":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "success_criteria":{"type":"string"},"repetitions":{"type":"integer","minimum":1},"scenario_version":{"type":"string"},"type":{"enum":["A","B"]}
+  }
+}
